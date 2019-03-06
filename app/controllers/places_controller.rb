@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
 
-  def index
-  end  
+    def index
+    end  
 end
