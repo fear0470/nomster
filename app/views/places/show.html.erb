@@ -104,7 +104,7 @@
 
 <h1 class="float-left">Photos</h1>
 
-<% @place.photos.each do |comment| %>
+<% @place.photos.each do |photo| %>
   <div class="booyah-box col-10 offset-1">
       <%= image_tag photo.picture.url %>
       <%= photo.caption %>
