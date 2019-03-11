@@ -37,6 +37,8 @@ gem 'figaro'
 
 gem 'carrierwave', '~> 1.0'
 
+gem "fog-aws"
+
 gem 'will_paginate', '> 3.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
