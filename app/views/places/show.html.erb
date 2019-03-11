@@ -112,17 +112,17 @@
        <small><%= photo.user.email %></small>
 <% end %>
 
-<div class="col-12 col-sm-6">
+  <% if place.picture.present? %>
+    <div class="col-12">
       <blockquote>
-        <% if picture.present? %>
-          <b><%= picture %></b> -
+        <% if picture.last.present? %>
+          <b><%= picture.last %></b> -
         <% end %>
-        <%= comment.message %>
+        <%= picture.last.caption %>
         <small><%= comment.user.email %></small>
       </blockquote>
-  </div>
-</div>
-<% end %>
+     </div>
+  <% end %>
 
 <!-- Modal -->
 <div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -156,4 +156,4 @@
 
 
 </div>
-
+<$ end %>
