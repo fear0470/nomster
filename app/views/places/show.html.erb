@@ -45,7 +45,7 @@
     <% end %>
   </div>
 </div>
-<div class="clear"></div>
+
 
 
 
@@ -102,15 +102,27 @@
 </div>
 <div class="clear"></div>
 
-<h1>Photos</h1>
+<h1 class="float-left">Photos</h1>
 
 <% @place.photos.each do |comment| %>
+  <div class="booyah-box col-10 offset-1">
       <%= image_tag photo.picture.url %>
-        <%= photo.caption %>
-      <small><%= photo.user.email %></small>
+      <%= photo.caption %>
+      <% if photo.user.present? %>
+       <small><%= photo.user.email %></small>
 <% end %>
 
-
+<div class="col-12 col-sm-6">
+      <blockquote>
+        <% if picture.present? %>
+          <b><%= picture %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+  </div>
+</div>
+<% end %>
 
 <!-- Modal -->
 <div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -123,16 +135,18 @@
         <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
       </div>
       
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
       <div class="modal-body">
-        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <%= f.input :picture %>
-        <%= f.input :caption %>
+          <%= f.input :picture %>
+          <%= f.input :caption %> 
       </div>
-<% end %>
       </div>
       <div class="modal-footer">
-        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+         
       </div>
+      <% end %>
     </div>
   </div>
   <!-- Button trigger modal -->
@@ -142,3 +156,4 @@
 
 
 </div>
+
