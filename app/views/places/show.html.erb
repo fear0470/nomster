@@ -4,7 +4,6 @@
 <p><%= @place.description %></p>
 
 
-    
 
 <% if @place.latitude.present? && @place.longitude.present? %>  
  
@@ -129,7 +128,7 @@
       </div>
     </div>
   </div>
-
+<br /> <br />
   <div class="col-10 offset-1">
     <h1 class="float: left;">
       <span>Photos</span>
@@ -142,6 +141,8 @@
   </div>
 
   <div class="clear"></div>
+
+
 
   <div class="row">
     <% @place.photos.each do |photo| %>
@@ -162,3 +163,4 @@
     </div>
   <% end %>
   </div>
+
