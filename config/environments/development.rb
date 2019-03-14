@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :test
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
@@ -10,6 +10,8 @@ Rails.application.configure do
     user_name: ENV['GMAIL_ADDRESS'],
     password: ENV['GMAIL_PASSWORD']
   }
+
+  config.action_mailer.default_url_options = {host: 'localhost:3030'}
   
   # Settings specified here will take precedence over those in config/application.rb.
 
