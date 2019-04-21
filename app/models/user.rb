@@ -7,6 +7,6 @@ class User < ApplicationRecord
 
 
   has_many :places, dependent: :destroy
-  has_many :comments   
+  has_many :comments, dependent: :destroy   
   has_many :photos    
 end
