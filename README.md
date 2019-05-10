@@ -1,24 +1,28 @@
-# README
+<h1>Nomster</h1>
+<h2>Ruby on Rails framework.</h2>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nomster is a Yelp clone app that lets users make a profile, post pizza plaes, and comment on other restaurants. You can check it out here. Sign up, add some of your place to get a slice and discover new ones too!
 
-Things you may want to cover:
+Features:
+<ul>
+  <li>  Google Maps API is integrated to let users see where a restaurant is located when checking the place page..</li>
 
-* Ruby version
+   <li>   Twitter Bootstrap 3 was utilized for CSS and components. </li>
 
-* System dependencies
+  <li>    Devise is used for user security and forms.</li>
 
-* Configuration
+  <li> A homepage slider with an image carousel to switch between photos.</li>
 
-* Database creation
+  <li> Users can comment on other restaurant pages.</li>
 
-* Database initialization
+  <li> Amazon Web Services (S3) is used for photo storage when users upload photos.</li>
 
-* How to run the test suite
+  <li> Profile page shows which restaurants the user has created, which restaurants the user has commented on, and other stats.</li>
+</ul>
 
-* Services (job queues, cache servers, search engines, etc.)
+Here is an example of a pizza place posted to the site. 
+![](app/assets/images/nomster1.png)
+<br />
 
-* Deployment instructions
-
-* ...
+Here is an example of a user uploaded comment and a user uploaded image attached to the restaurant page. 
+![](app/assets/images/nomster2.png)
